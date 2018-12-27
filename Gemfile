@@ -12,6 +12,21 @@ gem "pg", ">= 0.18", "< 2.0"
 # Use Puma as the app server
 gem "puma", "~> 3.11"
 gem "rubocop", require: false
+gem "active_model_serializers"
+gem "pundit"
+gem "awesome_print"
+gem "has_scope"
+gem "kaminari"
+gem "api-pagination"
+gem "devise_token_auth"
+gem "sidekiq"
+gem "aws-sdk-s3"
+gem "fast_jsonapi"
+gem "jsonapi-rails"
+gem "friendly_id"
+gem "rswag"
+gem "strong_migrations"
+gem "goldiloader"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -34,6 +49,13 @@ gem "bootsnap", ">= 1.1.0", require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: %i[mri mingw x64_mingw]
+  gem "factory_bot_rails"
+  gem "faker", git: "https://github.com/stympy/faker.git", branch: "master"
+  gem "rspec-rails"
+  gem "shoulda-matchers"
+  gem "database_cleaner"
+  gem "guard-rspec", require: false
+  gem "pundit-matchers"
 end
 
 group :development do
@@ -41,7 +63,13 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
-  gem "guard-rspec", require: false
+  gem "bullet"
+  gem "reek"
+  gem "brakeman", require: false
+  gem "bundler-audit"
+  gem "rubocop", require: false
+  gem "rubocop-rails_config"
+  gem "rubocop-rspec"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
